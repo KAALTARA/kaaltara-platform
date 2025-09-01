@@ -14,8 +14,9 @@ services:
       - key: PYTHONUNBUFFERED
         value: "1"
 
-  - type: static
+  - type: web
     name: kaaltara-app
+    env: static
     rootDir: frontend
     buildCommand: npm ci && npm run build
     staticPublishPath: dist
